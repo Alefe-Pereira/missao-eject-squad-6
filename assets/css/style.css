@@ -88,7 +88,7 @@ nav {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('imgs/hero-bg.png') center / cover no-repeat;
+  background: url('../imgs/homepage/hero-bg.png') center / cover no-repeat;
   filter: brightness(0.5);
 }
 
@@ -191,8 +191,7 @@ nav {
 
 /* ===== BANNER CTA ===== */
 .banner-cta {
-  background: 
-url('imgs/banner/bg.png') center / cover no-repeat;
+background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;

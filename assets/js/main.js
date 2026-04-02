@@ -1,12 +1,22 @@
+// CARROSSEL DE IMAGENS
 const imagens = [
-  'imgs/carrossel/1.png',
-  'imgs/carrossel/2.png',
-  'imgs/carrossel/3.png',
+  'assets/imgs/homepage/carrossel/1.png',
+  'assets/imgs/homepage/carrossel/2.png',
+  'assets/imgs/homepage/carrossel/3.png',
 ];
 
 let atual = 0;
 
 const img = document.querySelector('.espaco-slider img');
+
+// Gera os dots dinamicamente
+const dotsContainer = document.querySelector('.espaco-dots');
+imagens.forEach((_, i) => {
+  const dot = document.createElement('span');
+  dot.classList.add('dot');
+  dotsContainer.appendChild(dot);
+});
+
 const dots = document.querySelectorAll('.dot');
 
 function irPara(index) {
