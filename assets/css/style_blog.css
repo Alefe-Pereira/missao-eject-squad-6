@@ -1,7 +1,7 @@
-/* --- Cabeçalho do Blog --- */
+/* Cabeçalho do Blog */
 .blog-section {
   padding: 60px 20px;
-  background-color: #f4f4f4; /* Fundo cinza claro do mockup */
+  background-color: #f4f4f4;
   text-align: center;
 }
 
@@ -16,21 +16,21 @@
   margin-bottom: 50px;
 }
 
-/* --- Sistema de Grid para os Cards --- */
+/* Sistema de Grid para os Cards */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colunas no Desktop */
-  gap: 30px; /* Espaço entre os cards */
-  max-width: 1000px; /* Limita a largura para não esticar muito em telas gigantes */
-  margin: 0 auto; /* Centraliza o grid na tela */
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px; 
+  max-width: 1000px; 
+  margin: 0 auto; 
 }
 
-/* --- Estilo de cada Card --- */
+/* estilo de cada Card */
 .blog-card {
   background-color: #ffffff;
-  border-radius: 0px; /* Bordas levemente arredondadas */
-  overflow: hidden; /* Garante que a imagem não vaze as bordas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 0px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -39,14 +39,14 @@
 .card-img {
   width: 100%;
   height: 200px;
-  object-fit: cover; /* Mantém a proporção da imagem sem achatar */
+  object-fit: cover;
 }
 
 .card-content {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Faz o conteúdo preencher o espaço restante */
+  flex-grow: 1; 
 }
 
 .card-date {
@@ -70,7 +70,7 @@
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 20px;
-  flex-grow: 1; /* Empurra o botão pro fundo se o texto for curto */
+  flex-grow: 1;
 }
 
 /* --- Botão Ler Mais --- */
@@ -80,22 +80,22 @@
 
 .btn-ler-mais {
   display: inline-block;
-  background-color: #e67e22; /* Laranja Apollo */
+  background-color: #e67e22;
   color: #ffffff;
   padding: 10px 30px;
-  border-radius: 20px; /* Bordas bem arredondadas no botão */
+  border-radius: 20px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 .btn-ler-mais:hover {
-  background-color: #000000; /* Laranja mais escuro ao passar o mouse */
+  background-color: #000000;
 }
 
 /* --- Responsividade (Mobile) --- */
 @media (max-width: 768px) {
   .blog-grid {
-    grid-template-columns: 1fr; /* Muda para 1 coluna no celular */
+    grid-template-columns: 1fr;
   }
 }

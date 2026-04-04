@@ -1,0 +1,155 @@
+
+.article-page {
+  background-color: #f4f4f4; 
+  padding: 40px 20px;
+}
+
+.article-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+.article-title {
+  color: #e67e22; 
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.author-avatar {
+  width: 4em;
+  height: 4em;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.article-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-top: 3px;
+}
+
+.separator {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+/* Imagens e Legendas  */
+figure {
+  margin: 0;
+}
+
+.article-featured-image {
+  margin-bottom: 30px;
+}
+
+.article-featured-image img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 8px;
+  /* tracinho laranja em cima da legenda */
+  display: inline-block;
+  border-top: 2px solid #e67e22; 
+  padding-top: 5px;
+}
+
+.article-content p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.highlight-text {
+  color: #e67e22;
+  font-style: italic;
+  font-weight: bold;
+  margin: 30px 20px; 
+  text-align: left;
+}
+
+/* bloco inline (Imagem na esquerda, texto na direita) */
+.inline-image-text {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.inline-image-text figure {
+  flex: 0 0 45%; /* imagem ocupa 45% do espaço */
+}
+
+.inline-image-text img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.inline-image-text p {
+  margin: 0;
+}
+
+/* --- Botão Voltar --- */
+.article-actions {
+  margin-top: 50px;
+}
+
+.btn-voltar {
+  display: inline-block;
+  background-color: #e67e22;
+  color: #ffffff;
+  padding: 12px 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-voltar:hover {
+  background-color: #d35400;
+}
+
+/* media query */
+@media (max-width: 768px) {
+  .article-container {
+    padding: 25px; /* reduz as margens internas na tela pequena */
+  }
+  
+  .inline-image-text {
+    flex-direction: column; /* imagem pra cima e o texto pra baixo no celular */
+  }
+  
+  .inline-image-text figure {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
