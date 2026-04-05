@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="assets/css/style.css"/>
   <link rel="stylesheet" href="assets/css/style_blog.css">
+  <link rel="stylesheet" href="assets/css/style_modal.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -179,7 +180,55 @@
 
 
 
+    <!-- MODAL PARA FAZER AS RESERVAS -->
 
+  <div class="modal-overlay" id="modalReserva">
+    <div class="modal-content">
+      
+      <button class="btn-fechar-modal" id="fecharModal">
+        <i class="bi bi-x-lg"></i>
+      </button>
+
+      <div class="modal-header">
+        <img src="./assets/imgs/homepage/logo/apolloPreta.png" alt="Apollo Restaurante" class="modal-logo">
+        <h2>Faça sua reserva</h2>
+      </div>
+
+      <form id="formReserva">
+        
+        <div class="input-group">
+          <label for="nomeReserva">Nome completo</label>
+          <input type="text" id="nomeReserva" placeholder="Digite seu nome" required>
+        </div>
+
+        <div class="input-group">
+          <label for="dataReserva">Data</label>
+          <input type="date" id="dataReserva" required>
+        </div>
+
+        <div class="input-group">
+          <label for="horarioReserva">Horário</label>
+          <input type="time" id="horarioReserva" required>
+        </div>
+
+        <div class="input-group">
+          <label for="qtdPessoas">Quantidade de pessoas</label>
+          <select id="qtdPessoas" required>
+            <option value="1">1 pessoa</option>
+            <option value="2" selected>2 pessoas</option>
+            <option value="3">3 pessoas</option>
+            <option value="4">4 pessoas</option>
+            <option value="5+">5 ou mais pessoas</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-confirmar-reserva" id="btnConfirmar">
+          CONFIRMAR RESERVA
+        </button>
+
+      </form>
+    </div>
+  </div>
 
 
 
