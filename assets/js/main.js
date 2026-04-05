@@ -30,3 +30,4 @@ document.querySelector('.next').addEventListener('click', () => irPara(atual + 1
 dots.forEach((dot, i) => dot.addEventListener('click', () => irPara(i)));
 
 irPara(0);
+

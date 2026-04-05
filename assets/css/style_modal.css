@@ -1,0 +1,123 @@
+/* =========================================
+   MODAL DE RESERVA
+========================================= */
+
+/* 1. O fundo escuro (Overlay) - Cobre a tela toda */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Preto com 70% de transparência */
+  z-index: 9999; /* Garante que fique por cima de TUDO no site */
+  
+  /* ESCONDE O MODAL POR PADRÃO */
+  display: none; 
+  justify-content: center;
+  align-items: center;
+}
+
+/* 2. Classe mágica que o JS vai usar para mostrar o modal */
+.modal-overlay.active {
+  display: flex;
+}
+
+/* 3. A caixa branca do formulário */
+.modal-content {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 4px; /* Bordas levemente arredondadas */
+  width: 90%;
+  max-width: 400px; /* Tamanho máximo para não esticar em telas grandes */
+  position: relative; /* Necessário para o botão X se guiar por ele */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* 4. Botão de fechar (X) */
+.btn-fechar-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.btn-fechar-modal:hover {
+  color: #e67e22; /* Fica laranja ao passar o mouse */
+}
+
+/* 5. Cabeçalho (Logo e Título) */
+.modal-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-logo {
+  width: 140px;
+  margin-bottom: 10px;
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: bold;
+}
+
+/* 6. Campos do Formulário */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit; /* Puxa a fonte principal do site */
+  outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #e67e22; /* Borda laranja ao digitar */
+}
+
+/* 7. Botão Confirmar Reserva */
+.btn-confirmar-reserva {
+  width: 100%;
+  background-color: #e67e22;
+  color: #ffffff;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-confirmar-reserva:hover {
+  background-color: #d35400;
+}
+
+/* 8. Classe de Sucesso (Verde) que o JS vai adicionar */
+.btn-confirmar-reserva.sucesso {
+  background-color: #006400; /* Verde escuro do mockup */
+  pointer-events: none; /* Desativa novos cliques após confirmar */
+}
