@@ -1,0 +1,269 @@
+/* ===== SOBRE NÓS — ESTILOS PRÓPRIOS ===== */
+
+  
+
+/* HERO SOBRE */
+.hero-sobre {
+  background: url('../assets/imgs/sobre/bg') center / cover no-repeat;
+  position: relative;
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.hero-sobre::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #333;
+}
+
+.hero-sobre-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
+
+.hero-sobre-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 48px;
+  margin-bottom: 12px;
+}
+
+.hero-sobre-content p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* ===== TITULOS CENTRALIZADOS E SUBTITULO ===== */
+.historia h2,
+.missao h2,
+.equipe h2,
+.servicos h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+/* SUBTÍTULOS DAS SEÇÕES */
+.section-sub {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== NOSSA HISTÓRIA ===== */
+.historia {
+  padding: 100px 80px;
+  background: #fff;
+}
+
+.historia-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.historia-bloco {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.historia-texto {
+  flex: 1;
+}
+
+.historia-texto p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* CORRIGIDO AQUI */
+.historia-imagem {
+  flex: 1;
+}
+
+.historia-imagem img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* ===== MISSÃO ===== */
+.missao {
+  padding: 80px 48px;
+  background: #f5f5f5;
+}
+
+.missao-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.missao-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 28px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.missao-card:hover {
+  transform: translateY(-4px);
+}
+
+.missao-icon {
+  width: 52px;
+  height: 52px;
+  background: #fff8f3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.missao-card h3 {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.missao-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ===== EQUIPE ===== */
+.equipe {
+  padding: 80px 48px;
+  background: #fff;
+}
+
+.equipe-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.membro {
+  text-align: center;
+}
+
+.membro-foto {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.membro h3 {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.membro-cargo {
+  font-size: 12px;
+  color: var(--orange);
+}
+
+.membro-desc {
+  font-size: 13px;
+}
+
+/* ===== SERVIÇOS ===== */
+.servicos {
+  padding: 80px 48px;
+  background: #f5f5f5;
+}
+
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.servico-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
+}
+
+.servico-icon {
+  margin-bottom: 20px;
+}
+
+.servico-card:hover {
+  transform: translateY(-4px);
+}
+
+.servico-card h3 {
+  font-size: 14px;
+}
+
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+
+ 
+
+  .hero-sobre {
+    padding: 60px 24px;
+  }
+
+  .hero-sobre-content h1 {
+    font-size: 32px;
+  }
+
+  .historia {
+    padding: 60px 24px;
+  }
+
+  .historia-bloco {
+    flex-direction: column-reverse;
+    text-align: center; }
+
+  .historia-imagem img {
+    max-width: 100%;
+  }
+
+  /* grids viram coluna */
+  .missao-cards,
+  .servicos-grid,
+  .equipe-grid 
+  {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+
+@media (max-width: 480px) {
+  .historia h2,
+  .missao h2,
+  .equipe h2,
+  .servicos h2 {
+    font-size: 28px;
+  }
+}
