@@ -125,6 +125,7 @@
 }
 
 .missao-card:hover {
+  outline: 2px solid #E17100;
   transform: translateY(-4px);
 }
 
@@ -132,7 +133,7 @@
   width: 64px;               /* Handoff: Frame 34 = 64×64 */
   height: 64px;
   background: #FEF3C6;       /* Handoff: Frame background #FEF3C6 */
-  border-radius: 33px 55px 4px 0px; /* Handoff: border-radius 33554400 */
+  border-radius: 100%; /* Handoff: border-radius 33554400 */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -233,13 +234,14 @@
 
 .servico-card:hover {
   transform: translateY(-4px);
+  outline: 2px solid #E17100;
 }
 
 .servico-icon {
   width: 64px;                 /* Handoff: Frame 64×64 */
   height: 64px;
   background: #FEF3C9;         /* Handoff: background #FEF3C9 */
-  border-radius: 33px 55px 4px 0px; /* Handoff: border-radius 33554400 */
+  border-radius: 100%; /* Handoff: border-radius 33554400 */
   display: flex;
   align-items: center;
   justify-content: center;
