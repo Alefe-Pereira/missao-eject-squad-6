@@ -123,6 +123,7 @@
 }
 
 .missao-card:hover {
+  outline: 2px solid #E17100;
   transform: translateY(-4px);
 }
 
@@ -215,6 +216,7 @@
 }
 
 .servico-card:hover {
+  outline: 2px solid #E17100;
   transform: translateY(-4px);
 }
 
