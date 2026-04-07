@@ -114,11 +114,13 @@
 }
 
 .missao-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 36px 28px;
+  background: #FFFFFF;        /* Handoff: Card missão background #FFFFFF */
+  border-radius: 10px;
+  width: 240px;               /* Handoff: Card missão width 240 */
+  min-height: 334px;          /* Handoff: Card missão height 334 */
+  padding: 16px;              /* Handoff: Frame padding 16 left/right */
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0px 2px 4px -2px rgba(0,0,0,0.08); /* Handoff: Drop shadow 0px 2px 4px -2px */
   transition: transform 0.2s;
 }
 
@@ -127,26 +129,39 @@
 }
 
 .missao-icon {
-  width: 52px;
-  height: 52px;
-  background: #fff8f3;
-  border-radius: 50%;
+  width: 64px;               /* Handoff: Frame 34 = 64×64 */
+  height: 64px;
+  background: #FEF3C6;       /* Handoff: Frame background #FEF3C6 */
+  border-radius: 33px 55px 4px 0px; /* Handoff: border-radius 33554400 */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
 }
 
+.missao-icon img,
+.missao-icon i {
+  width: 32px;               /* Handoff: Icon 32×32 */
+  height: 32px;
+}
+
 .missao-card h3 {
-  font-weight: 700;
-  font-size: 16px;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600;          /* Handoff: Semi Bold */
+  font-size: 20px;           /* Handoff: font-size 20 */
+  line-height: 28px;         /* Handoff: line-height 28 */
+  color: #262626;            /* Handoff: color #262626 */
   margin-bottom: 12px;
 }
 
 .missao-card p {
-  font-size: 13px;
-  color: #666;
-  line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;          /* Handoff: Regular */
+  font-size: 16px;           /* Handoff: font-size 16 */
+  line-height: 28px;         /* Handoff: line-height 28 */
+  color: #525252;            /* Handoff: color #525252 */
+  width: 218px;              /* Handoff: texto width 218 */
+  max-width: 100%;
 }
 
 /* ===== EQUIPE ===== */
@@ -202,26 +217,48 @@
 }
 
 .servico-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 36px 24px;
+  background: #FFFFFF;         /* Handoff: card 1 background #FFFFFF */
+  border-radius: 10px;         /* Handoff: border-radius 10 */
+  width: 202px;                /* Handoff: card 1 width 202 */
+  min-height: 258px;           /* Handoff: card 1 height 258 */
+  padding: 70px 16px 16px;     /* Handoff: padding top 70, left/right 16 */
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  box-shadow: 0px 4px 6px -4px rgba(0,0,0,0.08); /* Handoff: Drop shadow 0px 4px 6px -4px */
   transition: transform 0.2s;
-}
-
-.servico-icon {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                   /* Handoff: item spacing 15 */
 }
 
 .servico-card:hover {
   transform: translateY(-4px);
 }
 
+.servico-icon {
+  width: 64px;                 /* Handoff: Frame 64×64 */
+  height: 64px;
+  background: #FEF3C9;         /* Handoff: background #FEF3C9 */
+  border-radius: 33px 55px 4px 0px; /* Handoff: border-radius 33554400 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.servico-icon img,
+.servico-icon i {
+  width: 32px;                 /* Handoff: Icon 32×32 */
+  height: 32px;
+}
+
 .servico-card h3 {
-  font-weight: 700;
-  font-size: 16px;
-  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600;            /* Handoff: Semi Bold */
+  font-size: 20px;             /* Handoff: font-size 20 */
+  line-height: 28px;           /* Handoff: line-height 28 */
+  color: #262626;              /* Handoff: color #262626 */
+  margin-bottom: 0;
 }
 
 .servico-card p {

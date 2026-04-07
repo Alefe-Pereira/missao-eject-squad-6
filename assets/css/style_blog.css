@@ -19,26 +19,28 @@
 /* Sistema de Grid para os Cards */
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 30px; 
-  max-width: 1000px; 
-  margin: 0 auto; 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* estilo de cada Card */
 .blog-card {
-  background-color: #ffffff;
-  border-radius: 0px; 
-  overflow: hidden; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* Handoff: Rectangle 221 background #FFFFFF */
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08); /* Handoff: Drop shadow 0px 4px 4px 0px #020000 */
   text-align: left;
   display: flex;
   flex-direction: column;
+  width: 482px;    /* Handoff: Card 1 width 482 */
+  max-width: 100%;
 }
 
 .card-img {
   width: 100%;
-  height: 200px;
+  height: 192px;   /* Handoff: image 3 height 192 */
   object-fit: cover;
 }
 
@@ -46,13 +48,18 @@
   padding: 20px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
+/* Frame da data */
 .card-date {
-  font-size: 0.85rem;
-  color: #888;
+  font-size: 14px;          /* Handoff: font-size 14 */
+  line-height: 20px;        /* Handoff: line-height 20 */
+  color: #737373;           /* Handoff: "10 de Março, 2026" color #737373 */
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;         /* Handoff: Regular */
   margin-bottom: 10px;
+  height: 20px;             /* Handoff: Frame 33 height 20 */
 }
 
 .card-date i {
@@ -60,17 +67,26 @@
 }
 
 .card-title {
-  color: #333;
-  font-size: 1.25rem;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600;   /* Handoff: Semi Bold */
+  font-size: 30px;    /* Handoff: font-size 30 */
+  line-height: 28px;  /* Handoff: line-height 28 */
+  color: #202826;     /* Handoff: color #202826 */
   margin-bottom: 10px;
+  width: 321px;       /* Handoff: título width 321 */
+  max-width: 100%;
 }
 
 .card-excerpt {
-  color: #666;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;   /* Handoff: Regular */
+  font-size: 20px;    /* Handoff: font-size 20 */
+  line-height: 24px;  /* Handoff: line-height 24 */
+  color: #525252;     /* Handoff: color #525252 */
   margin-bottom: 20px;
   flex-grow: 1;
+  width: 422px;       /* Handoff: excerpt width 422 */
+  max-width: 100%;
 }
 
 /* --- Botão Ler Mais --- */
@@ -85,15 +101,17 @@
   padding: 10px 30px;
   border-radius: 20px;
   text-decoration: none;
-  font-weight: bold;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600;   /* Handoff: Semi Bold */
+  font-size: 18px;    /* Handoff: "Ler mais" font-size 18 */
+  line-height: 24px;  /* Handoff: line-height 24 */
+  color: #FFFFFF;     /* Handoff: color #FFFFFF */
   transition: background-color 0.3s ease;
 }
 
 .btn-ler-mais:hover {
   background-color: #000000;
 }
-
-
 
 /* --- Responsividade (Mobile) --- */
 @media (max-width: 768px) {

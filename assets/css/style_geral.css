@@ -31,17 +31,17 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 48px;
-  background: var(--white);
+  padding: 0 48px;
+  height: 107px; /* Handoff: NavBar height 107, width 1440 */
+  background: #FFFFFF; /* Handoff: Rectangle 202 background #FFFFFF */
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08); /* Handoff: Drop shadow 0px 4px 4px 0px #000000 */
 }
 
-
 .nav-logo {
-  height: 2em;
+  height: 34.61px; /* Handoff: APOLLO height 34.61 */
   object-fit: contain;
 }
 
@@ -54,33 +54,36 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: var(--text-muted);
+  font-family: 'Inter', sans-serif; /* Handoff: font-family Inter */
+  font-weight: 600; /* Handoff: Semi Bold */
+  font-size: 16px; /* Handoff: font-size 16 */
+  line-height: 24px; /* Handoff: line-height 24 */
+  color: #000000; /* Handoff: Blog/Sobre Nós color #000000 */
   transition: color 0.2s;
 }
 
 .nav-links a.active,
 .nav-links a:hover {
-  color: var(--orange);
+  color: #E97400; /* Handoff: Home active color #E97400 */
 }
 
 .btn-reserva-nav {
-  background: var(--orange);
-  color: var(--white);
+  background: #E17100; /* Handoff: Rectangle 220 background #E17100 */
+  color: #FFFFFF; /* Handoff: "Fazer reserva" color #FFFFFF */
   border: none;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
+  width: 200px;  /* Handoff: Rectangle 220 width 200 */
+  height: 60px;  /* Handoff: Rectangle 220 height 60 */
+  border-radius: 10px; /* Handoff: border-radius 10 */
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600; /* Handoff: Semi Bold */
+  font-size: 26px; /* Handoff: font-size 26 */
+  line-height: 24px; /* Handoff: line-height 24 */
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
 }
 
 .btn-reserva-nav:hover {
-  background: #d96010;
+  background: #c96500;
   transform: translateY(-1px);
 }
 
@@ -109,14 +112,20 @@ nav {
 }
 
 /* MEDIA QUERY NAVBAR */
-/* telas menores que 768 pixels vao ter essa configuração de css */
 @media (max-width: 768px) {
+  nav {
+    height: 54px;   /* Handoff: Navbar Mobile height 54 */
+    padding: 0 16px;
+  }
+
   .nav-links {
     display: none;
   }
 
   .menu-mobile {
     display: block;
+    width: 25px;    /* Handoff: Frame (hamburger) 25×25 */
+    height: 25px;
   }
 
   .nav-links.active {
@@ -136,8 +145,6 @@ nav {
   .footer-mapa{
     display: none;
   }
-
-  
 }
 
 
@@ -146,7 +153,7 @@ nav {
 /* ===== HERO ===== */
 .hero {
   position: relative;
-  height: 480px;
+  height: 557px; /* Handoff: Banner principal 1440×557px */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,30 +187,39 @@ nav {
 }
 
 .hero-content p {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.85);
-  margin-bottom: 32px;
+  font-size: 24px;          /* Handoff: sub-título font-size 24 */
+  line-height: 32px;        /* Handoff: line-height 32 */
+  color: #E5E5E5;           /* Handoff: text color #E5E5E5 */
+  font-family: 'Inter', sans-serif; /* Handoff: font-family Inter */
+  font-weight: 400;         /* Handoff: font-weight Regular */
+  text-align: center;       /* Handoff: text-align Center */
+  width: 498px;             /* Handoff: sub-título width 498 */
+  max-width: 100%;
+  margin: 0 auto 32px;
 }
 
 .btn-reserva-hero {
-  background: var(--orange);
-  color: var(--white);
+  background: #E17100; /* Handoff: background #E17100 */
+  color: #F0F0F0;      /* Handoff: text color #F0F0F0 */
   border: none;
-  padding: 14px 36px;
-  border-radius: 6px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
+  width: 200px;        /* Handoff: width 200 */
+  height: 60px;        /* Handoff: height 60 */
+  border-radius: 10px; /* Handoff: border-radius 10 */
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 500;    /* Handoff: Medium */
+  font-size: 24px;     /* Handoff: font-size 24 */
+  line-height: 28px;   /* Handoff: line-height 28 */
   cursor: pointer;
+  box-shadow: 0px 4px 6px -4px #000000; /* Handoff: Drop shadow 0px 4px 6px -4px #000000 */
   transition: background 0.2s, transform 0.15s;
 }
 
 .btn-reserva-hero:hover {
-  background: #d96010;
+  background: #c96500;
   transform: translateY(-2px);
 }
 
-/* ===== DESTAQUES ===== */
+/* ===== DESTAQUES (Cards home) ===== */
 .destaques {
   padding: 64px 48px;
   background: var(--gray-light);
@@ -221,17 +237,19 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .card {
-  background: var(--white);
-  border-radius: 10px;
+  background: #FFFFFF; /* Handoff: background #FFFFFF */
+  border-radius: 12px; /* Handoff: border-radius 12 */
   padding: 32px 20px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.08); /* Handoff: Drop shadow 0px 4px 4px 0px #000000 */
   transition: transform 0.2s, box-shadow 0.2s;
+  width: 332px;        /* Handoff: Component 5 width 332 */
+  min-height: 201px;   /* Handoff: Component 5 height 201 */
 }
 
 .card:hover {
@@ -239,23 +257,40 @@ nav {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
+.card-icon {
+  width: 60px;           /* Handoff: Frame 60×60 */
+  height: 60px;
+  background: #FEF3C6;   /* Handoff: background #FEF3C6 */
+  border-radius: 37px 28px 27px 0px; /* Handoff: border-radius 37282700 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
 .card-icon img {
-  width: 48px;
-  height: 48px;
+  width: 40px;  /* Handoff: Icon 40×40 */
+  height: 40px;
   object-fit: contain;
 }
 
 .card h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 15px;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 600;   /* Handoff: Semi Bold */
+  font-size: 20px;    /* Handoff: font-size 20 */
+  line-height: 28px;  /* Handoff: line-height 28 */
+  color: #262626;     /* Handoff: color #262626 */
   margin-bottom: 8px;
 }
 
 .card p {
-  font-size: 13px;
-  color: var(--text-muted);
-  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;   /* Handoff: Regular */
+  font-size: 16px;    /* Handoff: font-size 16 */
+  line-height: 24px;  /* Handoff: line-height 24 */
+  color: #525252;     /* Handoff: color #525252 */
+  width: 301px;       /* Handoff: text width 301 */
+  max-width: 100%;
 }
 
 /* ===== BANNER CTA ===== */
@@ -366,9 +401,11 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
 }
 
 .espaco h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 36px;
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-weight: 700;    /* Handoff: Bold */
+  font-size: 64px;     /* Handoff: font-size 64 */
+  line-height: 36px;   /* Handoff: line-height 36 */
+  color: #262626;      /* Handoff: color #262626 */
   margin-bottom: 32px;
 }
 
@@ -381,7 +418,7 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
 
 .espaco-slider img {
   width: 100%;
-  max-height: 420px;
+  max-height: 650px;   /* Handoff: Rectangle 652 height 650 */
   object-fit: cover;
 }
 
@@ -402,7 +439,7 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
 }
 
 .slider-btn:hover {
-  background: var(--orange);
+  background: #E17100;
 }
 
 .slider-btn.prev {
@@ -421,16 +458,16 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 30px;          /* Handoff: Ellipse 8/9 width 30 */
+  height: 30px;         /* Handoff: Ellipse 8/9 height 30 */
   border-radius: 50%;
-  background: #ccc;
+  background: #D4D4D4;  /* Handoff: Ellipse 8/9 background #D4D4D4 */
   display: inline-block;
   cursor: pointer;
 }
 
 .dot.ativo {
-  background: var(--orange);
+  background: #E17100;  /* Handoff: Ellipse 7 (ativo) #E17100 */
 }
 
 /* ===== FOOTER ===== */
@@ -566,7 +603,9 @@ footer {
   }
 
   .hero-content p {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 28px;
+    width: 100%;
   }
 
   /* DESTAQUES */

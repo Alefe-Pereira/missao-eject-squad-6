@@ -100,24 +100,27 @@
 /* 7. Botão Confirmar Reserva */
 .btn-confirmar-reserva {
   width: 100%;
-  background-color: #e67e22;
-  color: #ffffff;
+  background-color: #E17100;  /* Handoff: background #E17100 */
+  color: #F0F0F0;             /* Handoff: text color #F0F0F0 */
   border: none;
-  padding: 15px;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 4px;
+  height: 60px;               /* Handoff: height 60 */
+  font-family: 'Inter', sans-serif; /* Handoff: Inter */
+  font-size: 24px;            /* Handoff: font-size 24 */
+  font-weight: 500;           /* Handoff: Medium */
+  line-height: 28px;          /* Handoff: line-height 28 */
+  border-radius: 10px;        /* Handoff: border-radius 10 */
   cursor: pointer;
   margin-top: 10px;
+  box-shadow: 0px 4px 6px -4px #000000; /* Handoff: Drop shadow */
   transition: background-color 0.3s ease;
 }
 
 .btn-confirmar-reserva:hover {
-  background-color: #d35400;
+  background-color: #c96500;
 }
 
 /* 8. Classe de Sucesso (Verde) que o JS vai adicionar */
 .btn-confirmar-reserva.sucesso {
-  background-color: #006400; /* Verde escuro do mockup */
-  pointer-events: none; /* Desativa novos cliques após confirmar */
+  background-color: #006400;
+  pointer-events: none;
 }
