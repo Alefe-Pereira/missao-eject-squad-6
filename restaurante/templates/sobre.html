@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre Nós — Apollo Restaurante</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="../assets/css/style_geral.css"/>
-  <link rel="stylesheet" href="../assets/css/style_modal.css"/>
-  <link rel="stylesheet" href="../assets/css/style_sobre.css"/>
+  <link rel="stylesheet" href="{% static 'assets/css/style_geral.css' %}"/>
+  <link rel="stylesheet" href="{% static 'assets/css/style_modal.css' %}"/>
+  <link rel="stylesheet" href="{% static 'assets/css/style_sobre.css' %}"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -15,11 +16,11 @@
 
   <!-- NAVBAR -->
   <nav>
-    <img src="../assets/imgs/homepage/logo/apolloPreta.png" alt="Apollo Restaurante" class="nav-logo"/>
+    <img src="{% static 'assets/imgs/homepage/logo/apolloPreta.png' %}" alt="Apollo Restaurante" class="nav-logo"/>
     <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../blog/blog.html">Blog</a></li>
-      <li><a href="../sobreNós/sobre.html" class="active">Sobre Nós</a></li>
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'blog' %}">Blog</a></li>
+      <li><a href="{% url 'sobre' %}" class="active">Sobre Nós</a></li>
       <li><button class="btn-reserva-nav btn-abrir-reserva">Fazer reserva</button></li>
     </ul>
     <button class="menu-mobile">
@@ -63,7 +64,7 @@
       </div>
 
       <div class="historia-imagem">
-        <img src="../assets/imgs/sobre/nossaHistoria/1.png" alt="Foto do restaurante">
+        <img src="{% static 'assets/imgs/sobre/nossaHistoria/1.png' %}" alt="Foto do restaurante">
       </div>
 
     </div>
@@ -83,7 +84,7 @@
       </div>
 
       <div class="historia-imagem">
-        <img src="../assets/imgs/sobre/nossaHistoria/2.png" alt="Interior do restaurante">
+        <img src="{% static 'assets/imgs/sobre/nossaHistoria/2.png' %}" alt="Interior do restaurante">
       </div>
 
     </div>
@@ -100,7 +101,7 @@
 
       <div class="missao-card">
         <div class="missao-icon">
-          <img src="../assets/imgs/sobre/icons/missao.png" alt="Missão">
+          <img src="{% static 'assets/imgs/sobre/icons/missao.png' %}" alt="Missão">
         </i></div>
         <h3>Missão</h3>
         <p>Proporcionar experiências gastronômicas inesquecíveis por meio da excelência na culinária mediterrânea, valorizando ingredientes frescos, técnicas refinadas e um atendimento acolhedor, aliado a uma experiência digital prática e sofisticada.</p>
@@ -108,7 +109,7 @@
 
       <div class="missao-card">
         <div class="missao-icon">
-          <img src="../assets/imgs/sobre/icons/visao.png" alt="Visão">
+          <img src="{% static 'assets/imgs/sobre/icons/visao.png' %}" alt="Visão">
         </i></div>
         <h3>Visão</h3>
         <p>Ser reconhecido como o principal destino gastronômico de Natal, destacando-se pela inovação, qualidade excepcional e pela criação de momentos memoráveis para cada cliente.</p>
@@ -116,7 +117,7 @@
 
       <div class="missao-card">
         <div class="missao-icon">
-          <img src="../assets/imgs/sobre/icons/valores.png" alt="Valores">
+          <img src="{% static 'assets/imgs/sobre/icons/valores.png' %}" alt="Valores">
         </i></div>
         <h3>Valores</h3>
         <p>Excelência: Buscar continuamente o mais alto padrão em pratos, atendimento e ambiente.
@@ -135,42 +136,42 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
   <div class="equipe-grid">
 
     <div class="membro">
-  <img src="../assets/imgs/authors/ricardoAlmeida.png" alt="Chef" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/ricardoAlmeida.png' %}" alt="Chef" class="membro-foto"/>
   <h3>Ricardo Almeida</h3>
   <p class="membro-cargo">Chef Executivo</p>
   <p class="membro-desc">Com formação em culinária mediterrânea na Europa.</p>
 </div>
 
 <div class="membro">
-  <img src="../assets/imgs/authors/camilaDuarte.png" alt="Sub Chef" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/camilaDuarte.png' %}" alt="Sub Chef" class="membro-foto"/>
   <h3>Camila Duarte</h3>
   <p class="membro-cargo">Sous - Chef</p>
   <p class="membro-desc">Especialista em frutos do mar.</p>
 </div>
 
 <div class="membro">
-  <img src="../assets/imgs/authors/lucasFernandes.png" alt="Chefs de Cozinha" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/lucasFernandes.png' %}" alt="Chefs de Cozinha" class="membro-foto"/>
   <h3>Lucas Fernandes</h3>
   <p class="membro-cargo">Chef de Partie (Massas)</p>
   <p class="membro-desc">Apaixonado pela gastronomia italiana.</p>
 </div>
 
 <div class="membro">
-  <img src="../assets/imgs/authors/julianaRocha.png" alt="Chefs de Cozinha" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/julianaRocha.png' %}" alt="Chefs de Cozinha" class="membro-foto"/>
   <h3>Juliana Rocha</h3>
   <p class="membro-cargo">Chef de Partie (Sobremesas)</p>
   <p class="membro-desc">Formada em confeitaria fina.</p>
 </div>
 
 <div class="membro">
-  <img src="../assets/imgs/authors/andreMartins.png" alt="Chefs de Cozinha" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/andreMartins.png' %}" alt="Chefs de Cozinha" class="membro-foto"/>
   <h3>André Martins</h3>
   <p class="membro-cargo">Garçom Sommelier</p>
   <p class="membro-desc">Orienta os clientes na escolha de vinhos que elevam a experiência gastronômica.</p>
 </div>
 
 <div class="membro">
-  <img src="../assets/imgs/authors/beatrizNunes.png" alt="Chefs de Cozinha" class="membro-foto"/>
+  <img src="{% static 'assets/imgs/authors/beatrizNunes.png' %}" alt="Chefs de Cozinha" class="membro-foto"/>
   <h3>Beatriz Nunes</h3>
   <p class="membro-cargo">Garçonete</p>
   <p class="membro-desc">Reconhecida pelo atendimento acolhedor e atencioso.</p>
@@ -186,13 +187,13 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
     <div class="servicos-grid">
 
       <div class="servico-card">
-        <div class="servico-icon"><img src="../assets/imgs/sobre/icons/chefCasa.png" alt="Chef's em casa"></i></div>
+        <div class="servico-icon"><img src="{% static 'assets/imgs/sobre/icons/chefCasa.png' %}" alt="Chef's em casa"></i></div>
         <h3>Menu À La Carte Premium</h3>
         <p>Seleção de pratos exclusivos previamente elaborados pelos chefs, disponíveis no cardápio para escolha individual. Cada opção combina técnica refinada, ingredientes selecionados e apresentação sofisticada, permitindo ao cliente escolher sua refeição com liberdade dentro de um padrão elevado de qualidade.</p>
       </div>
 
       <div class="servico-card">
-        <div class="servico-icon"><img src="../assets/imgs/sobre/icons/vinhos.png" alt="Vinhos especializados"></i></div>
+        <div class="servico-icon"><img src="{% static 'assets/imgs/sobre/icons/vinhos.png' %}" alt="Vinhos especializados"></i></div>
         <h3>Eventos Privativos e Corporativos</h3>
         <p>Organização de jantares exclusivos para celebrações, encontros empresariais e ocasiões especiais, com cardápio personalizado e atendimento dedicado.</p>
         
@@ -200,7 +201,7 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
 
       <div class="servico-card">
         <div class="servico-icon">
-          <img src="../assets/imgs/sobre/icons/treinamento.png" alt="Treinamento de Chef's">
+          <img src="{% static 'assets/imgs/sobre/icons/treinamento.png' %}" alt="Treinamento de Chef's">
         </i></div>
         <h3>Vinhos especializados</h3>
         <p>Serviço guiado por sommelier, oferecendo combinações perfeitas entre pratos e vinhos selecionados, elevando a experiência sensorial do cliente.</p>
@@ -213,14 +214,14 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
-      <img src="../assets/imgs/homepage/logo/apolloBranca.png" alt="Apollo Restaurante" class="footer-logo"/>
+      <img src="{% static 'assets/imgs/homepage/logo/apolloBranca.png' %}" alt="Apollo Restaurante" class="footer-logo"/>
     </div>
     <div class="footer-grid">
       <div class="footer-col">
         <h4>Contato</h4>
-        <p><img src="../assets/imgs/homepage/footer/telefone.png" class="footer-icon-item"/> (11) 92234-5678</p>
-        <p><img src="../assets/imgs/homepage/footer/email.png" class="footer-icon-item"/> RestauranteApollo@gmail.com</p>
-        <p><img src="../assets/imgs/homepage/footer/local.png" class="footer-icon-item"/> Avenida Roberto Freire, 123 - Natal/RN</p>
+        <p><img src="{% static 'assets/imgs/homepage/footer/telefone.png' %}" class="footer-icon-item"/> (11) 92234-5678</p>
+        <p><img src="{% static 'assets/imgs/homepage/footer/email.png' %}" class="footer-icon-item"/> RestauranteApollo@gmail.com</p>
+        <p><img src="{% static 'assets/imgs/homepage/footer/local.png' %}" class="footer-icon-item"/> Avenida Roberto Freire, 123 - Natal/RN</p>
       </div>
       <div class="footer-col">
         <h4>Horário de Funcionamento</h4>
@@ -231,7 +232,7 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
       </div>
       <div class="footer-col">
         <h4>Redes Sociais</h4>
-        <img src="../assets/imgs/homepage/footer/redesSociais.png" alt="Redes Sociais" class="footer-icones"/>
+        <img src="{% static 'assets/imgs/homepage/footer/redesSociais.png' %}" alt="Redes Sociais" class="footer-icones"/>
       </div>
       <div class="footer-col">
         <iframe
@@ -241,36 +242,45 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
       </div>
     </div>
     <div class="footer-bottom">
-      2026 - MISSÃO EJECT <img src="../assets/imgs/homepage/logo/missaoEject.png" alt="Missão Eject" class="footer-bottom-logo"/>
+      2026 - MISSÃO EJECT <img src="{% static 'assets/imgs/homepage/logo/missaoEject.png' %}" alt="Missão Eject" class="footer-bottom-logo"/>
     </div>
   </footer>
 
   <!-- MODAL RESERVA -->
-  <div class="modal-overlay" id="modalReserva">
+
+   <div class="modal-overlay" id="modalReserva">
     <div class="modal-content">
+      
       <button class="btn-fechar-modal" id="fecharModal">
         <i class="bi bi-x-lg"></i>
       </button>
+
       <div class="modal-header">
-        <img src="../assets/imgs/homepage/logo/apolloPreta.png" alt="Apollo Restaurante" class="modal-logo">
+        <img src="{% static 'imgs/homepage/logo/apolloPreta.png' %}" alt="Apollo Restaurante" class="modal-logo">
         <h2>Faça sua reserva</h2>
       </div>
-      <form id="formReserva">
+
+      <form id="formReserva" method="POST" action="{% url 'reserva' %}">
+        {% csrf_token %}
+        
         <div class="input-group">
           <label for="nomeReserva">Nome completo</label>
-          <input type="text" id="nomeReserva" placeholder="Digite seu nome" required>
+          <input type="text" id="nomeReserva" name="nome" placeholder="Digite seu nome" required>
         </div>
+
         <div class="input-group">
           <label for="dataReserva">Data</label>
-          <input type="date" id="dataReserva" required>
+          <input type="date" id="dataReserva" name="data" required>
         </div>
+
         <div class="input-group">
           <label for="horarioReserva">Horário</label>
-          <input type="time" id="horarioReserva" required>
+          <input type="time" id="horarioReserva" name="hora" required>
         </div>
+
         <div class="input-group">
           <label for="qtdPessoas">Quantidade de pessoas</label>
-          <select id="qtdPessoas" required>
+          <select id="qtdPessoas" name="numero_pessoas" required>
             <option value="1">1 pessoa</option>
             <option value="2" selected>2 pessoas</option>
             <option value="3">3 pessoas</option>
@@ -278,14 +288,16 @@ Acolhimento e Sofisticação: Oferecer um ambiente elegante, mas ao mesmo tempo 
             <option value="5+">5 ou mais pessoas</option>
           </select>
         </div>
+
         <button type="submit" class="btn-confirmar-reserva" id="btnConfirmar">
           CONFIRMAR RESERVA
         </button>
+
       </form>
     </div>
   </div>
 
   
-  <script src="../assets/js/interacoes.js"></script>
+  <script src="{% static 'assets/js/interacoes.js' %}"></script>
 </body>
 </html>

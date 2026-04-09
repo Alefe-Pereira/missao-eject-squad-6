@@ -1,13 +1,11 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Reserva(models.Model):
     nome = models.CharField(max_length=100)
-    email = models.EmailField()
-    telefone = models.CharField(max_length=20)
     data = models.DateField()
     hora = models.TimeField()
     numero_pessoas = models.PositiveIntegerField()
-    observacoes = models.TextField(blank=True)
     criado_em = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -22,10 +20,20 @@ class Reserva(models.Model):
 class ArtigoBlog(models.Model):
     titulo = models.CharField(max_length=200)
     imagem = models.ImageField(upload_to='blog/')
+    legenda = models.TextField(max_length=300, blank=True, null=True)
     trecho = models.TextField(max_length=300)
-    conteudo = models.TextField()
+    primeiro_paragrafo = models.TextField(max_length=400, null=True)
+    segundo_paragrafo = models.TextField(max_length=400, null=True)
+    terceiro_paragrafo = models.TextField(max_length=400, null=True)
+    quarto_paragrafo = models.TextField(max_length=400, null=True)
     data_publicacao = models.DateField()
     criado_em = models.DateTimeField(auto_now_add=True)
+    autor = models.CharField(max_length=50, null=True)
+    autor_imagem = models.ImageField(upload_to='autores', null=True)
+    citacao1 = models.TextField(null=True)
+    citacao2 = models.TextField(null=True)
+    segunda_imagem = models.ImageField(upload_to='sub_imagem', null=True)
+    legenda2 = models.TextField(max_length=200, null=True)
 
     def __str__(self):
         return self.titulo
@@ -49,3 +57,12 @@ class Destaque(models.Model):
         ordering = ['ordem']
         verbose_name = 'Destaque'
         verbose_name_plural = 'Destaques'
+
+
+class Funcionario(models.Model): #Classe dos funcionários para edição do blog
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    cargo = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.usuario.username
+    
