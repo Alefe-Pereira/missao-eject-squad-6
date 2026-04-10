@@ -22,10 +22,20 @@ class Reserva(models.Model):
 class ArtigoBlog(models.Model):
     titulo = models.CharField(max_length=200)
     imagem = models.ImageField(upload_to='blog/')
+    legenda = models.TextField(max_length=300, blank=True, null=True)
     trecho = models.TextField(max_length=300)
-    conteudo = models.TextField()
+    primeiro_paragrafo = models.TextField(max_length=400, null=True, blank=True)
+    segundo_paragrafo = models.TextField(max_length=400, null=True, blank=True)
+    terceiro_paragrafo = models.TextField(max_length=400, null=True, blank=True)
+    quarto_paragrafo = models.TextField(max_length=400, null=True, blank=True)
     data_publicacao = models.DateField()
     criado_em = models.DateTimeField(auto_now_add=True)
+    autor = models.CharField(max_length=50, null=True, blank=True)
+    autor_imagem = models.ImageField(upload_to='autores/', null=True, blank=True)
+    citacao1 = models.TextField(null=True, blank=True)
+    citacao2 = models.TextField(null=True, blank=True)
+    segunda_imagem = models.ImageField(upload_to='sub_imagem/', null=True, blank=True)
+    legenda2 = models.TextField(max_length=200, null=True, blank=True)
 
     def __str__(self):
         return self.titulo
