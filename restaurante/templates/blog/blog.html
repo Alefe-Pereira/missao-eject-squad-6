@@ -36,7 +36,9 @@
     <div class="blog-grid">
       {% for artigo in artigos %}
       <article class="blog-card">
+        {% if artigo.imagem %}
         <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}" class="card-img">
+        {% endif %}
         <div class="card-content">
           <span class="card-date"><i class="bi bi-calendar3"></i> {{ artigo.data_publicacao }}</span>
           <h3 class="card-title">{{ artigo.titulo }}</h3>
