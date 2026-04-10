@@ -123,7 +123,7 @@
 }
 
 .missao-card:hover {
-  outline: 2px solid #E17100;
+  outline: 6px solid #E17100;
   transform: translateY(-4px);
 }
 
@@ -205,7 +205,7 @@
 .servico-card {
   background: #fff;
   border-radius: 12px;
-  padding: 36px 24px;
+  padding: 36px 28px;
   text-align: center;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   transition: transform 0.2s;
@@ -216,7 +216,7 @@
 }
 
 .servico-card:hover {
-  outline: 2px solid #E17100;
+  outline: 6px solid #E17100;
   transform: translateY(-4px);
 }
 
