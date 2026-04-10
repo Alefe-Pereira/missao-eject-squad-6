@@ -109,7 +109,6 @@ nav {
 }
 
 /* MEDIA QUERY NAVBAR */
-/* telas menores que 768 pixels vao ter essa configuração de css */
 @media (max-width: 768px) {
   .nav-links {
     display: none;
@@ -136,8 +135,6 @@ nav {
   .footer-mapa{
     display: none;
   }
-
-  
 }
 
 
@@ -226,16 +223,16 @@ nav {
 }
 
 .card {
-  background: var(--white);
-  border-radius: 10px;
-  padding: 32px 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 36px 28px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.2s;
 }
 
 .card:hover {
-  outline: 2px solid #E17100;
+  outline: 6px solid #E17100;
   transform: translateY(-4px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
@@ -261,7 +258,7 @@ nav {
 
 /* ===== BANNER CTA ===== */
 .banner-cta {
-background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
+  background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -289,7 +286,7 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   opacity: 0.9;
 }
 
-.btn-banner {
+.txt-banner {
   background: #2a1a0a;
   color: #c8860a;
   border: 2px solid #c8860a;
@@ -299,16 +296,12 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   font-weight: 700;
   font-size: 13px;
   letter-spacing: 1px;
-  cursor: pointer;
   margin-top: 12px;
   margin-bottom: 16px;
   display: block;
   width: 100%;
   transition: background 0.2s;
-}
-
-.btn-banner:hover {
-  background: #3a2a1a;
+  text-align: center;
 }
 
 .banner-estrelas {
@@ -321,10 +314,11 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   object-fit: contain;
 }
 
+/* FOTOS SOBREPOSTAS EM DIAGONAL */
 .banner-fotos {
   position: relative;
   width: 340px;
-  height: 220px;
+  height: 300px;
   flex-shrink: 0;
 }
 
@@ -332,31 +326,34 @@ background: url('../imgs/homepage/banner/bg.png') center / cover no-repeat;
   object-fit: cover;
   border-radius: 10px;
   position: absolute;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* Foto de TRÁS — canto superior esquerdo */
 .foto-atras {
-  width: 190px;
-  height: 220px;
+  width: 200px;
+  height: 145px;
   top: 0;
   left: 0;
   z-index: 1;
 }
 
+/* Foto do MEIO — deslocada */
 .foto-meio {
-  width: 140px;
-  height: 105px;
-  top: 0;
-  right: 0;
-  z-index: 1;
+  width: 200px;
+  height: 145px;
+  top: 70px;
+  left: 60px;
+  z-index: 2;
 }
 
+/* Foto da FRENTE — mais deslocada, na frente de todas */
 .foto-frente {
-  width: 140px;
-  height: 105px;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
+  width: 200px;
+  height: 145px;
+  top: 140px;
+  left: 120px;
+  z-index: 3;
 }
 
 /* ===== NOSSO ESPAÇO ===== */
@@ -524,13 +521,12 @@ footer {
 
 .footer-mapa {
   width: 100%;
-  aspect-ratio: 16 / 9; /* proporção bonita */
+  aspect-ratio: 16 / 9;
   border: 0;
   border-radius: 10px;
 }
 
 /* ===== RESPONSIVIDADE MOBILE ===== */
- /* CSS aqui só executa se a tela tiver 768px ou menos */
 @media (max-width: 768px) {
 
   /* NAVBAR */
@@ -588,23 +584,33 @@ footer {
   }
 
   .banner-fotos {
+    position: relative;
     width: 100%;
-    height: 200px;
+    height: 260px;
   }
 
   .foto-atras {
     width: 55%;
-    height: 200px;
+    height: 130px;
+    top: 0;
+    left: 5%;
+    z-index: 1;
   }
 
   .foto-meio {
-    width: 42%;
-    height: 95px;
+    width: 55%;
+    height: 130px;
+    top: 55px;
+    left: 22%;
+    z-index: 2;
   }
 
   .foto-frente {
-    width: 42%;
-    height: 95px;
+    width: 55%;
+    height: 130px;
+    top: 110px;
+    left: 39%;
+    z-index: 3;
   }
 
   /* FOOTER */
