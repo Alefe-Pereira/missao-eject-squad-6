@@ -50,7 +50,6 @@ modalReserva.addEventListener('click', (event) => {
 
 
 // --- LÓGICA DE CONFIRMAR RESERVA ---
-
 formReserva.addEventListener('submit', (event) => {
   event.preventDefault();
 
@@ -58,6 +57,18 @@ formReserva.addEventListener('submit', (event) => {
   btnConfirmar.classList.add('sucesso');
 
   setTimeout(() => {
-    formReserva.submit();
+    const formData = new FormData(formReserva);
+    const csrfToken = formReserva.querySelector('[name=csrfmiddlewaretoken]').value;
+
+    fetch(formReserva.action, {
+      method: 'POST',
+      headers: { 'X-CSRFToken': csrfToken },
+      body: formData
+    }).then(() => {
+      modalReserva.classList.remove('active');
+      btnConfirmar.textContent = 'CONFIRMAR RESERVA';
+      btnConfirmar.classList.remove('sucesso');
+      formReserva.reset();
+    });
   }, 1500);
 });
