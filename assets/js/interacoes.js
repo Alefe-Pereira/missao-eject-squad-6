@@ -52,19 +52,12 @@ modalReserva.addEventListener('click', (event) => {
 // --- LÓGICA DE CONFIRMAR RESERVA ---
 
 formReserva.addEventListener('submit', (event) => {
-  event.preventDefault(); 
-  
-  // muda o texto e adiciona a classe do css que deixa verde
+  event.preventDefault();
+
   btnConfirmar.textContent = 'RESERVA CONFIRMADA';
-  btnConfirmar.classList.add('sucesso'); 
-  
-  // fecha o modal após 2.5 segundos
+  btnConfirmar.classList.add('sucesso');
+
   setTimeout(() => {
-    modalReserva.classList.remove('active'); // esconde o modal
-    
-    // eeseta o formulário e o botão para o estado original (caso queiram abrir de novo)
-    btnConfirmar.textContent = 'CONFIRMAR RESERVA';
-    btnConfirmar.classList.remove('sucesso');
-    formReserva.reset(); // limpa os campos de texto e data
-  }, 2500);
+    formReserva.submit();
+  }, 1500);
 });
