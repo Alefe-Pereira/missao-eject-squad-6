@@ -47,7 +47,9 @@
         </header>
 
         <figure class="article-featured-image">
+          {% if artigo.imagem %}
           <img src="{{ artigo.imagem.url }}" alt="{{ artigo.titulo }}">
+          {% endif %}
           {% if artigo.legenda %}
           <figcaption>{{ artigo.legenda }}</figcaption>
           {% endif %}
