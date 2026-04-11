@@ -11,6 +11,7 @@ Projeto desenvolvido como parte do desafio técnico da **EJECT — Empresa Júni
 | Alefe Pereira | Front-end |
 | Pedro Alves | Back-end |
 | Arthur | Back-end |
+| Dherik Domingos | Front-end |
 
 ## 🔗 Links
 
