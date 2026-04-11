@@ -58,9 +58,9 @@ formReserva.addEventListener('submit', (event) => {
 
   setTimeout(() => {
     const formData = new FormData(formReserva);
-    const csrfToken = formReserva.querySelector('[name=csrfmiddlewaretoken]').value;
+    const csrfToken = document.querySelector('[name=csrfmiddlewaretoken]').value;
 
-    fetch(formReserva.action, {
+    fetch('/reserva/', {
       method: 'POST',
       headers: { 'X-CSRFToken': csrfToken },
       body: formData
