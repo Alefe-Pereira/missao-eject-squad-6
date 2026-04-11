@@ -25,7 +25,7 @@ const botoesAbrirModal = document.querySelectorAll('.btn-abrir-reserva');
 
 //  seleciona o formulário e o botão de confirmar
 const formReserva = document.getElementById('formReserva');
-const btnConfirmar = document.getElementById('btnConfirmar');
+
 
 // ABRIR E FECHAR 
 
@@ -53,6 +53,7 @@ modalReserva.addEventListener('click', (event) => {
 formReserva.addEventListener('submit', (event) => {
   event.preventDefault();
 
+  const btnConfirmar = formReserva.querySelector('button[type="submit"]');
   btnConfirmar.textContent = 'RESERVA CONFIRMADA';
   btnConfirmar.classList.add('sucesso');
 
